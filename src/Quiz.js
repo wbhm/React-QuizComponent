@@ -16,7 +16,7 @@ class Quiz extends Component {
         if (isQuizEnd) {
             return (
                 <div>
-                    <QuizEnd display={!isQuizEnd} />
+                    <QuizEnd />
                 </div>
             );
         } else {
