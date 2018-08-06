@@ -17,12 +17,16 @@ class Quiz extends Component {
         });
     }
 
+    handleResetQuiz() {
+        this.setState({ quiz_position: 1 });
+    }
+
     render() {
         const isQuizEnd = ((this.state.quiz_position - 1) === quizData.quiz_questions.length);
         if (isQuizEnd) {
             return (
                 <div>
-                    <QuizEnd />
+                    <QuizEnd resetQuizHandler={this.handleResetQuiz.bind(this)} />
                 </div>
             );
         } else {
